@@ -1,0 +1,21 @@
+{
+  "name": "fakeproject-redradix",
+  "version": "1.0.0",
+  "description": "A great repository",
+  "main": "readme.md",
+  "author": "Miguel Mínguez Mazón <m.minguezz@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mminguezz/fakeproject-redradix"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "concurrently": "^6.2.0",
+    "copyfiles": "^2.4.1",
+    "sass": "^1.35.2"
+  }
+}
