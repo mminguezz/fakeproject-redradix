@@ -1,0 +1,27 @@
+
+// ==========================================================================
+// Objects
+// ==========================================================================
+
+//
+// Media
+// ==========================================================================
+//
+// <div class="o-media">
+//  <img class="o-media-figure" src="avatar.jpg" alt="someone's avatar">
+//  <p class="o-media-body">Description of &hellip;</p>
+// </div>
+//
+
+.o-media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.o-media-figure {
+  margin-right: 1em;
+}
+
+.o-media-body {
+  flex: 1;
+}

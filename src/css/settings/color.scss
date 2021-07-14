@@ -1,0 +1,32 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+$white: rgba(255,255,255,1);
+$egyptian-blue: rgba(196,204,232,1);
+$timberwolf: rgba(224,224,224,1);
+$charcoal: rgba(72,72,72,1);
+$dark-gray: rgba(175,175,175,1);
+$lavender: rgba(240,242,249,1);
+$heliotrope: rgba(96,245,96,1);
+$gainsboro: rgba(216,216,216,1);
+$mesa-sunrise : rgba(245,96,96,1);
+$black: rgba(0,0,0,1);
+
+
+
+// def.
+$gradient: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 100%);
+
+
+//
+// Use cases
+// ==========================================================================
+
+$font-color-primary: $black;
+
+$bg-page: $lavender;
+$bg-header: $gradient;
+$bg-footer: $charcoal;
+
+$c-panel__bg: $gradient;

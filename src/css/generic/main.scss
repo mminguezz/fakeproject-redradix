@@ -1,3 +1,20 @@
+// normalize.css v8.0.1
+@import "normalize.scss";
+
+
+// ==========================================================================
+// Elements
+// ==========================================================================
+html {
+  font-family:  'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: .9375rem;
+  line-height: 1.6;
+}
+
 p {
   margin: 0 0 1rem;
 }
