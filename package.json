@@ -9,13 +9,12 @@
     "url": "https://github.com/mminguezz/fakeproject-redradix"
   },
   "scripts": {
-    "start": "npm run server",
-    "style": "sass --watch src/css/main.scss:./src/main.css",
-    "dist": "copyfiles --flat ./src/main.css ./src/index.html ./src/main.js ./dist/ && copyfiles -u 1 ./src/resources/* ./dist/",
-    "server": "browser-sync start --server 'src/' --files 'src/css/main.css, src/*.html'",
-    "dev": "concurrently --kill-others \"npm run style\" \"npm run server\""
-  },
-  "dependencies": {
+    "start": "npm run _server",
+    "test": "echo '-- coming soon --'",
+    "dev": "concurrently --kill-others \"npm run _style\" \"npm run _server\"",
+    "dist": "copyfiles -u 1 ./src/main.css ./src/index.html ./src/main.js ./src/resources/* ./dist/ ",
+    "_server": "browser-sync start --server 'src/' --files 'src/main.css, src/*.html, src/*.js'",
+    "_style": "sass --watch src/css/main.scss:./src/main.css"
   },
   "devDependencies": {
     "browser-sync": "^2.27.4",
