@@ -1,3 +1,13 @@
+/* #FFFFFF */
+/* #C4CCE8 */
+/* # */
+/* #484848 */
+/* #AFAFAF */
+/* # */
+/* # */
+/* # */
+/* # */
+/* #000000 */
 /* latin */
 @font-face {
   font-family: "Open Sans";
@@ -25,6 +35,10 @@
   src: url(https://fonts.gstatic.com/s/opensans/v20/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+/* 56px */
+/* 24px */
+/* 20px */
+/* 16px */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -378,6 +392,30 @@ p {
   margin: 0 0 1rem;
 }
 
+.bodycopy {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.h-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.375;
+}
+
+.h-description {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.h-hero {
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1.35;
+}
+
 html {
   --upper-tab: 0rem;
   --content-width--max: 60rem;
@@ -406,38 +444,57 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .o-stack-center {
+  --stack-center-padding: 1rem;
+  --content-width--max: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0.5rem;
 }
 
 .o-stack-center__item {
+  padding-left: var(--stack-center-padding);
+  padding-right: var(--stack-center-padding);
   max-width: var(--content-width--max);
   width: 100%;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 56rem) {
   html {
     --upper-tab: 2.5rem;
-    --content-width--max: 60rem;
   }
 
   .header {
     --header-padding: 2.5rem;
   }
+
+  .o-stack-center {
+    --content-width--max: 55rem;
+    --stack-center-padding: 0;
+  }
 }
 @media screen and (min-width: 75rem) {
-  html {
+  .o-stack-center {
+    --content-width--max: 74rem;
+  }
+}
+@media screen and (min-width: 112rem) {
+  .o-stack-center {
     --content-width--max: 80rem;
   }
 }
 html {
   background-color: #f0f2f9;
-  color: black;
+  color: #484848;
+}
+
+.bodycopy {
+  color: #484848;
 }
 
 .header {
@@ -450,6 +507,7 @@ html {
 
 .footer {
   background-color: #484848;
+  color: white;
 }
 
 .o-media {

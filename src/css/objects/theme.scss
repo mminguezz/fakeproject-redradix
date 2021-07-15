@@ -7,6 +7,10 @@ html {
   color: $font-color-primary;
 }
 
+.bodycopy {
+  color: $font-color-primary;
+} 
+
 .header {
   background: $bg-header;
 }
@@ -17,6 +21,7 @@ html {
 
 .footer {
   background-color: $bg-footer;
+  color: $font-color-ambient;
 }
 
 //

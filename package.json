@@ -12,7 +12,8 @@
     "start": "npm run _server",
     "test": "echo '-- coming soon --'",
     "dev": "concurrently --kill-others \"npm run _style\" \"npm run _server\"",
-    "dist": "copyfiles -u 1 ./src/main.css ./src/index.html ./src/main.js ./src/resources/* ./dist/ ",
+    "build": "copyfiles -u 1 ./src/main.css ./src/index.html ./src/main.js ./src/resources/* ./build/ ",
+    "style:pro": "sass --no-source-map --style=compressed src/css/main.scss:./dist/main.css",
     "_server": "browser-sync start --server 'src/' --files 'src/main.css, src/*.html, src/*.js'",
     "_style": "sass --watch src/css/main.scss:./src/main.css"
   },

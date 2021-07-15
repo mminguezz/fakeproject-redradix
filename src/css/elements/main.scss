@@ -3,3 +3,29 @@
 }
 
 
+// ==========================================================================
+// Texts
+// ==========================================================================
+.bodycopy {
+  font-weight: $text--regular;
+  font-size: $text-size-m;
+  line-height: 1.25;
+  letter-spacing: 0
+} 
+
+.h-title {
+  font-size: $text-size-xl;
+  font-weight: $text--semibold; 
+  line-height: 1.375;
+}
+
+.h-description {
+  font-size: $text-size-l;
+  line-height: 1.35;
+}
+
+.h-hero {
+  font-weight: $text--bold;
+  font-size: $text-size-xxl;
+  line-height: 1.35;
+}

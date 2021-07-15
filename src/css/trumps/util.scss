@@ -1,0 +1,103 @@
+// ==========================================================================
+// Utils
+// ==========================================================================
+
+
+
+//
+// Text
+// ==========================================================================
+ .u-text--center {
+   text-align: center;
+ }
+
+ .u-text--regular {
+   font-weight: $text--regular;
+ }
+
+ .u-text--semibold {
+   font-weight: $text--semibold;
+ }
+
+ .u-text--bold {
+   font-weight: $text--bold;
+ }
+
+ .u-text--lowercase {
+   text-transform: lowercase;
+ }
+
+ .u-text--all-caps {
+   text-transform: uppercase;
+ }
+
+ .u-text--capitalize {
+   text-transform: capitalize;
+ }
+
+ .u-text--capitalize--first::first-letter {
+   text-transform: capitalize;
+ }
+
+ .u-text--italic {
+   font-style: italic;
+ }
+
+
+
+//
+// Margin
+// ==========================================================================
+ .u-margin-bottom--0 {
+   margin-bottom: 0;
+ }
+
+ .u-margin-bottom--0-5 {
+   margin-bottom: 0.5rem;
+ }
+
+ .u-margin-bottom--1 {
+   margin-bottom: 1rem;
+ }
+
+ .u-margin-bottom--1-5 {
+   margin-bottom: 1.5rem;
+ }
+
+ .u-margin-bottom--2 {
+   margin-bottom: 2rem;
+ }
+
+ .u-margin-bottom--2-5 {
+   margin-bottom: 2.5rem;
+ }
+
+
+ .u-margin-top--0 {
+   margin-top: 0;
+ }
+
+ .u-margin-top--0-5 {
+   margin-top: 0.5rem;
+ }
+
+ .u-margin-top--1 {
+   margin-top: 1rem;
+ }
+
+ .u-margin-top--1-5 {
+   margin-top: 1.5rem;
+ }
+
+ .u-margin-top--2 {
+   margin-top: 2rem;
+ }
+
+ .u-margin-top--2-5 {
+   margin-top: 2.5rem;
+ }
+
+ .u-margin-l-r--auto {
+   margin-left: auto;
+   margin-right: auto;
+ }

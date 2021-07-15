@@ -1,0 +1,39 @@
+// ==========================================================================
+// Animations
+// ==========================================================================
+.a-container-overflow {
+  overflow: hidden;
+}
+
+.a-reveal-opacity {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 240ms;
+  transition-timing-function: linear;
+}
+
+.a-reveal-opacity.a-in {
+  opacity: 1;
+}
+
+.a-reveal-slide {
+  transform: translate(0, 10%);
+  transition-property: transform;
+  transition-duration: 320ms;
+  transition-timing-function: ease-out;
+}
+
+.a-reveal-slide.a-in {
+  transform: translate(0, 0);
+  transition-timing-function: ease-in;
+}
+
+.a-reveal-box {
+  transition-property: transform, opacity;
+  transition-duration: 320ms, 240ms;
+  transition-timing-function: ease-out, linear;
+}
+
+.a-reveal-box.a-in {
+  transition-timing-function: ease-in, linear;
+}
