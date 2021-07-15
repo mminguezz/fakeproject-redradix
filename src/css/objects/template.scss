@@ -3,6 +3,9 @@
 // ==========================================================================
 
 html {
+  --upper-tab: 0rem;
+  --content-width--max: 60rem;
+  
   min-height: 100vh;
   width: 100%;
 }
@@ -11,27 +14,85 @@ body {
   height: 100%;
 }
 
-.header {}
-.header__content {}
+.header {
+  --header-padding: 1.5rem;
+}
 
-.main {}
+.header__content {
+  padding: var(--header-padding) 0 calc( var(--header-padding) + var(--upper-tab));
+}
 
-.footer {}
+.main {  
+  transform: translateY( calc(-1 * var(--upper-tab)) );
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+
+
+
+//
+// center contents
+// ==========================================================================o
+.o-stack-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 .5rem;
+}
+
+.o-stack-center__item {
+  max-width: var(--content-width--max);
+  width: 100%;
+}
 
 
 //
 // Tablet
 // ==========================================================================
 
-@media screen and (min-width: 37.5em) { } 
+@media screen and (min-width: 37.5rem) { 
+  
+} 
 
 //
-// Small Desktop
+// Large Tablet
 // ==========================================================================
 
-@media screen and (min-width: 62em) { }
+@media screen and (min-width: 56rem) {
+  html {
+    --upper-tab: 2.5rem;
+    --content-width--max: 60rem;
+  }
+  
+  .header {
+    --header-padding: 2.5rem;
+  }
+  
+  .main {
+
+  }
+}
+
+//
+//  Small Desktop
+// ==========================================================================
+@media screen and (min-width: 75rem) { 
+  html {
+    --content-width--max: 80rem;
+  }
+
+}
+
 
 //
 //  Large Desktop
 // ==========================================================================
-@media screen and (min-width: 75em) { }
+@media screen and (min-width: 112rem) { 
+  
+}

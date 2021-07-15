@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header__content">
+  <header class="header o-stack-center">
+    <div class="header__content o-stack-center__item">
       <img class="logo" src="./resources/company-logo.svg" alt="Logo of Fake Project">
       <nav class="c-menu">
         <ul class="c-menu__list">
@@ -22,25 +22,28 @@
       </nav>  
     </div>
   </header>
-  <main class="main">
-    <div class="c-tab__bar">
-      <button class="c-tab-button">First tab</button>
-      <button class="c-tab-button">Second tab</button>
-      <button class="c-tab-button">Third tab</button>
-      <button class="c-tab-button">Fourth tab</button>
+  <main class="main o-stack-center">
+    <div class="main__content o-stack-center__item">
+      <div class="c-tab__bar ">
+        <button class="c-tab-button">First tab</button>
+        <button class="c-tab-button">Second tab</button>
+        <button class="c-tab-button">Third tab</button>
+        <button class="c-tab-button">Fourth tab</button>
+      </div>
+      <div class="--todo-tab-one">
+        <section class="--todo-items"></section>
+        <section class="--todo-items"></section>
+        <section class="--todo-items"></section>
+        <section class="--todo-items"></section>
+      </div>
+      <div class="--todo-tab-two">
+        <section class="--todo-items">Comming soon</section>
+      </div>
     </div>
-    <div class="--todo-tab-one">
-      <section class="--todo-items"></section>
-      <section class="--todo-items"></section>
-      <section class="--todo-items"></section>
-      <section class="--todo-items"></section>
-    </div>
-    <div class="--todo-tab-two">
-      <section class="--todo-items">Comming soon</section>
-    </div>
+    
   </main>
-  <footer class="footer">
-    <p>Fake Project © 2019</p>
+  <footer class="footer o-stack-center">
+    <p class="o-stack-center__item">Fake Project © 2019</p>
   </footer>
   <script src="main.js"></script> 
 </body>
