@@ -13,7 +13,7 @@ $gainsboro: rgba(216,216,216,1);     /* # */
 $mesa-sunrise : rgba(245,96,96,1);   /* # */
 $black: rgba(0,0,0,1);               /* #000000 */
 
-
+$charcoal-50: rgba(72,72,72,.5);
 
 // def.
 $gradient: linear-gradient(90deg, rgba(185,147,214,1) 0%, rgba(140,166,219,1) 100%);
@@ -27,12 +27,15 @@ $font-color-primary: $charcoal;
 $font-color-secondary: $dark-gray;
 $font-color-ambient: $white;
 
-$font-color-menu: $white;
-$font-color-menu--hover: $dark-gray;
 
 $bg-page: $lavender;
 $bg-header: $gradient;
 $bg-main: $white;
 $bg-footer: $charcoal;
+
+$c-menu-font-color: $white;
+$c-menu-font-color--hover: $charcoal;
+$c-menu__shadow: $charcoal-50;
+$c-menu__bg: $gradient;
 
 $c-panel__bg: $gradient;

@@ -16,6 +16,8 @@ body {
 
 .header {
   --header-padding: 1.5rem;
+  position: relative;
+  z-index: 5;
 }
 
 .header__content {

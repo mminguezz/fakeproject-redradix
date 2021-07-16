@@ -1,9 +1,14 @@
 //
 // Component Menu
 // ==========================================================================
-
+// 1.- calc ( ( --header-padding * 2 ) + --header-height )
+//
 .c-menu {}
 
+
+//
+// button - burguer
+//
 .c-menu__burguer {
   background-color: transparent;
   border: none;
@@ -17,7 +22,7 @@
 
 .c-menu__burguer:before {
   content: "";
-  background-color: $font-color-menu;
+  background-color: $c-menu-font-color;
   width: 2rem;
   height: 0.2rem;
   display: block;
@@ -30,7 +35,7 @@
 
 .c-menu__burguer:after {
   content: "";
-  background-color: $font-color-menu;
+  background-color: $c-menu-font-color;
   width: 2rem;
   height: 0.2rem;
   display: block;
@@ -41,14 +46,70 @@
   transition: all 0.3s ease;
 }
 
-
-.c-menu__list {
-  display: none;
+.c-menu__burguer {
+  
 }
 
+
+//
+// list and items
+//
+.c-menu__list,
+.c-menu__item {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+.c-menu__list {
+  padding-top: 5rem; /* 1 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: calc(100vw - 4rem);
+  background-image: $c-menu__bg;
+  z-index: -1;
+  box-shadow: 0 0 0 150vw transparent;
+  transform: translate(-100vw);
+  
+  transition-property: transform, box-shadow;
+  transition-duration: 320ms;
+  transition-timing-function: ease-out;
+}
+
+.c-menu__item {
+  padding: .5rem 1rem;
+}
+
+
+
+//
+// Actions - links
+//
+.c-menu__link {
+  color: $c-menu-font-color;
+  font-weight: $text--semibold; 
+  font-size: $text-size-xl;
+  line-height: 1.375;
+  
+  text-decoration: none;
+  
+  &:hover {
+    color: $c-menu-font-color--hover;
+  }
+}
+
+
+//
+// States
+//
 .is-open {
   .c-menu__list {
-    display: block;
+    transform: translate(0vw);
+    transition-timing-function: ease-in;
+    box-shadow: 0 0 0 150vw $c-menu__shadow;
   }
   
   .c-menu__burguer:before {
@@ -63,27 +124,3 @@
     top: -0.1rem;
   }
 }
-
-.c-menu__list,
-.c-menu__item {
-  margin:0;
-  padding: 0;
-  text-indent: 0;
-  list-style-type: none;
-}
-
-.c-menu__link {
-  color: $font-color-menu;
-  font-weight: $text--semibold; 
-  font-size: $text-size-xl;
-  line-height: 1.375;
-  
-  text-decoration: none;
-  
-  &:hover {
-    color: $font-color-menu--hover;
-  }
-}
-
-
-
