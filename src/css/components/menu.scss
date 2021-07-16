@@ -1,7 +1,7 @@
 //
 // Component Menu
 // ==========================================================================
-// 1.- calc ( ( --header-padding * 2 ) + --header-height )
+// 1. calc ( ( --header-padding * 2 ) + --header-height )
 //
 .c-menu {}
 
@@ -124,3 +124,76 @@
     top: -0.1rem;
   }
 }
+
+//
+// Tablet
+// ==========================================================================
+
+@media screen and (min-width: 37.5rem) {
+  .c-menu__burguer {
+    display: none;
+  }
+  
+  .c-menu {
+    margin: 0 auto;
+  }
+  
+  .c-menu__list {
+    padding-top: 0;
+    position: relative;
+    top: unset;
+    left: unset;
+    height: auto;
+    width: auto;
+    background-image: unset;
+    z-index: unset;
+    box-shadow: unset;
+    transform: unset;
+    
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .c-menu__item {
+    padding: 1.5rem 1rem 0;
+  }
+  
+  .c-menu__link {
+    font-size: $text-size-l;
+  }
+
+} 
+
+//
+// Large Tablet
+// ==========================================================================
+@media screen and (min-width: 56rem) {
+  .c-menu {
+    margin: 0;
+  }
+  
+  .c-menu__item {
+    padding: 0 0 0 2rem;
+  }
+  
+  
+}
+
+//
+//  Small Desktop
+// ==========================================================================
+@media screen and (min-width: 75rem) { 
+  .c-menu__item {
+    padding: 0 0 0 3.5rem;
+  }
+  
+  .c-menu__link {
+    font-size: $text-size-xl;
+  }
+}
+
+
+//
+//  Large Desktop
+// ==========================================================================
+@media screen and (min-width: 112rem) { }

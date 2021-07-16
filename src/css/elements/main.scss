@@ -1,5 +1,14 @@
 .logo {
+  width: min(75%, 13.75rem);
+  align-self: center;
+  display: inline-block;
+  margin: 0 auto;
+}
 
+@media screen and (min-width: 56rem) {
+  .logo {
+    margin: 0;
+  }
 }
 
 

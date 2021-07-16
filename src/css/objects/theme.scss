@@ -28,12 +28,24 @@ html {
 // Tablet
 // ==========================================================================
 
-@media screen and (min-width: 37.5rem) { } 
+@media screen and (min-width: 37.5rem) {
+  .header {
+    background: $bg-header;
+  }
+  
+  .header__content {
+    background: transparent;
+  }
+  
+} 
 
 //
 // Large Tablet
 // ==========================================================================
-@media screen and (min-width: 56rem) {}
+@media screen and (min-width: 56rem) {
+  
+  
+}
 
 //
 //  Small Desktop
