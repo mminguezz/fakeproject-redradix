@@ -3,10 +3,76 @@
 // ==========================================================================
 
 .c-tabs {
+  --c-tab-link-padding: 0.5rem 1rem;
+  --c-tab-panel-padding: 4rem 3.5rem;  
+  --c-tab-link-color: #{$c-tab__color};
+  --c-tab-item-bg: transparent;
+  
+  background-color: $white;
+  //$timberwolf;
 }
 
+.c-tabs__list,
+.c-tabs__item {
+  @include reset-list-style;
+}
 
-// --tab-content-padding: 1.5rem 1.25rem;
-// padding: var(--tab-content-padding);
-// 
-// --tab-content-padding: 4rem 3.5rem;
+.c-tabs__list {
+  display: flex;
+  flex-direction: row;
+  
+  background: linear-gradient(180deg, $white calc(100% - .25rem), $timberwolf calc(100% - .25rem), $timberwolf 100%);
+}
+
+.c-tabs__link {
+  color: var(--c-tab-link-color);
+  padding: var(--c-tab-link-padding);
+  font-size: $text-size-l;
+  line-height: 1.35;
+  font-weight: $text--semibold; 
+  text-decoration: none;
+  display: block;
+  background-color: $white;
+  //
+  
+  &[aria-selected] {
+    --c-tab-link-color: #{$c-tab__color--active};
+  
+  }
+}
+
+.c-tabs__item {
+  padding-bottom: 0.25rem;
+  background: var(--c-tab-item-bg);
+  
+  &.is-active {
+    --c-tab-item-bg: #{$gradient};
+  }
+}
+
+.c-tabs__panel {
+  padding: var(--c-tab-panel-padding);
+}
+
+//
+// Tablet
+// ==========================================================================
+
+@media screen and (min-width: 37.5rem) { 
+  .c-tabs {
+    --c-tab-link-padding: 1.5rem 2rem;
+  }
+}
+
+//
+// Large Tablet
+// ==========================================================================
+
+@media screen and (min-width: 56rem) { 
+  .c-tabs {
+    --c-tab-link-padding: 1.5rem 2rem;
+  }
+  .c-tabs__link {
+    font-size: $text-size-xl;
+  }
+}

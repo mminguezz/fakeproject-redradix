@@ -56,10 +56,7 @@
 //
 .c-menu__list,
 .c-menu__item {
-  margin:0;
-  padding: 0;
-  text-indent: 0;
-  list-style-type: none;
+  @include reset-list-style;
 }
 
 .c-menu__list {

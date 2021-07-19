@@ -1,6 +1,6 @@
 /* #FFFFFF */
 /* #C4CCE8 */
-/* # */
+/* #e0e0e */
 /* #484848 */
 /* #AFAFAF */
 /* # */
@@ -39,10 +39,6 @@
 /* 24px */
 /* 20px */
 /* 16px */
-/*  
-
-  tab-link : 20/27 #AFAFAF active: #484848 semibold -600
-*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -465,6 +461,9 @@ body {
 
 .main {
   transform: translateY(calc(-1 * var(--upper-tab)));
+  margin-bottom: 6.3rem;
+  /* 1 */
+  z-index: 2;
 }
 
 .footer {
@@ -474,22 +473,8 @@ body {
   left: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.o-stack-center {
-  --stack-center-padding: 1rem;
-  --content-width--max: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.o-stack-center__item {
-  padding-left: var(--stack-center-padding);
-  padding-right: var(--stack-center-padding);
-  max-width: var(--content-width--max);
   width: 100%;
-  box-sizing: border-box;
+  z-index: -1;
 }
 
 @media screen and (min-width: 37.5rem) {
@@ -518,21 +503,6 @@ body {
   .header__content {
     grid-template-columns: 1fr auto;
   }
-
-  .o-stack-center {
-    --content-width--max: 55rem;
-    --stack-center-padding: 0;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .o-stack-center {
-    --content-width--max: 74rem;
-  }
-}
-@media screen and (min-width: 112rem) {
-  .o-stack-center {
-    --content-width--max: 80rem;
-  }
 }
 html {
   background-color: #f0f2f9;
@@ -549,6 +519,7 @@ html {
 
 .main__content {
   background-color: white;
+  box-shadow: 0 2px 1rem 0 rgba(0, 0, 0, 0.16);
 }
 
 .footer {
@@ -565,6 +536,12 @@ html {
     background: transparent;
   }
 }
+@media screen and (min-width: 56rem) {
+  .main__content {
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+}
 .o-media {
   display: flex;
   align-items: flex-start;
@@ -578,6 +555,38 @@ html {
   flex: 1;
 }
 
+.o-stack-center {
+  --stack-center-padding: 1rem;
+  --content-width--max: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.o-stack-center__item {
+  padding-left: var(--stack-center-padding);
+  padding-right: var(--stack-center-padding);
+  max-width: var(--content-width--max);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 56rem) {
+  .o-stack-center {
+    --content-width--max: 55rem;
+    --stack-center-padding: 0;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .o-stack-center {
+    --content-width--max: 74rem;
+  }
+}
+@media screen and (min-width: 112rem) {
+  .o-stack-center {
+    --content-width--max: 80rem;
+  }
+}
 .c-menu__burguer {
   background-color: transparent;
   border: none;
@@ -720,6 +729,74 @@ html {
   .c-menu__link {
     font-size: 1.5rem;
   }
+}
+.c-tabs {
+  --c-tab-link-padding: 0.5rem 1rem;
+  --c-tab-panel-padding: 4rem 3.5rem;
+  --c-tab-link-color: #afafaf;
+  --c-tab-item-bg: transparent;
+  background-color: white;
+}
+
+.c-tabs__list,
+.c-tabs__item {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+.c-tabs__list {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(180deg, white calc(100% - .25rem), #e0e0e0 calc(100% - .25rem), #e0e0e0 100%);
+}
+
+.c-tabs__link {
+  color: var(--c-tab-link-color);
+  padding: var(--c-tab-link-padding);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+}
+.c-tabs__link[aria-selected] {
+  --c-tab-link-color: #484848;
+}
+
+.c-tabs__item {
+  padding-bottom: 0.25rem;
+  background: var(--c-tab-item-bg);
+}
+.c-tabs__item.is-active {
+  --c-tab-item-bg: linear-gradient(90deg, #b993d6 0%, #8ca6db 100%);
+}
+
+.c-tabs__panel {
+  padding: var(--c-tab-panel-padding);
+}
+
+@media screen and (min-width: 37.5rem) {
+  .c-tabs {
+    --c-tab-link-padding: 1.5rem 2rem;
+  }
+}
+@media screen and (min-width: 56rem) {
+  .c-tabs {
+    --c-tab-link-padding: 1.5rem 2rem;
+  }
+
+  .c-tabs__link {
+    font-size: 1.5rem;
+  }
+}
+.c-panel__text {
+  color: #c4cce8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 /*# sourceMappingURL=main.css.map */

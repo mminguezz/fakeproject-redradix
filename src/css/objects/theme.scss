@@ -17,6 +17,7 @@ html {
 
 .main__content {
   background-color: $bg-main;
+  box-shadow: 0 2px 1rem 0 $shadow-box;
 }
 
 .footer {
@@ -43,7 +44,10 @@ html {
 // Large Tablet
 // ==========================================================================
 @media screen and (min-width: 56rem) {
-  
+  .main__content {
+    overflow: hidden;
+    border-radius: $radius-box;
+  }
   
 }
 
