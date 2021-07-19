@@ -23,6 +23,7 @@
     newTab.focus();
     newTab.removeAttribute('tabindex');
     newTab.setAttribute('aria-selected', 'true');
+    newTab.scrollIntoView({block: "end", behavior: "smooth"});
     oldTab.removeAttribute('aria-selected');
     oldTab.setAttribute('tabindex', '-1');
     
