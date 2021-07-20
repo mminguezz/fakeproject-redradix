@@ -1,0 +1,71 @@
+
+// ==========================================================================
+// Objects
+// ==========================================================================
+
+[class*="o-grid--"] {
+  --o-grid-columns--two: 1fr;
+  
+  --o-grid-item-padding-vertical: 0;
+  --o-grid-item-padding-horizontal: 2rem;
+  
+  --o-grid-item-margin-vertical: 2.5rem;
+  --o-grid-item-margin-horizontal: 0;
+  
+  margin-left: var(--o-grid-item-padding-horizontal);
+  margin-right: var(--o-grid-item-padding-horizontal);
+  display: grid;
+}
+
+.o-grid--two {
+  grid-template-columns: var(--o-grid-columns--two);
+}
+
+
+.o-grid__item {
+  padding-right: var(--o-grid-item-padding-horizontal);
+  margin: var(--o-grid-item-margin-vertical) var(--o-grid-item-margin-horizontal);
+}
+
+.o-grid__item:last-child {
+  padding-right: 0;
+}
+
+.o-grid__item + .o-grid__item {
+  border-left: 1px solid $border-color;
+  padding-left: var(--o-grid-item-padding-horizontal);
+}
+
+.o-grid--two + .o-grid--two {
+  border-top: 1px solid $border-color;
+}
+
+
+//
+// Tablet
+// ==========================================================================
+
+@media screen and (min-width: 37.5rem) {
+  [class*="o-grid--"] {
+    --o-grid-columns--two: 1fr 1fr;
+  }
+}
+
+//
+// Large Tablet
+// ==========================================================================
+
+@media screen and (min-width: 56rem) {
+  [class*="o-grid--"] {
+    --o-grid-columns--two: 40% 1fr;
+    
+    --o-grid-item-padding-vertical: 0;
+    --o-grid-item-padding-horizontal: 3.5rem;
+    
+    --o-grid-item-margin-vertical: 4rem;
+    --o-grid-item-margin-horizontal: 0;
+
+    display: grid;
+  }
+}
+

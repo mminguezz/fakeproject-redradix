@@ -9,6 +9,7 @@ $bg-main: $white;
 $bg-footer: $charcoal;
 
 
+$border-color: $timberwolf;
 $shadow-box: rgba(0,0,0,0.16);
 $radius-box: 0.5rem;
 
@@ -21,6 +22,8 @@ $c-menu__bg: $gradient;
 
 $c-tab__color: $dark-gray;
 $c-tab__color--active: $charcoal;
+$c-tab__border: $timberwolf;
+$c-tab__bg: $white;
  
 
-$c-panel__bg: $gradient;
+$c-panel__active: $gradient;

@@ -16,9 +16,10 @@ $ npm run build                         > Create build [files for server - not o
 ```
 
 ## [TODO]
-* Unidad base es 8 ¿? elementos discrepantes (ancho tabs, etc) 
+* Unidad base es 8 ¿? elementos discrepantes (ancho tabs, espacios de elementos del grid de tabs, etc) 
 * Border último elemento de las tabs 
 * Footer: revisar scroll 
 * Header: mostrar y ocultar junto con el scroll en resoluciones pequeñas
 * CrossBrowser: scroll de las tabs - scroll-snap-type
 * Definir el foco de los elementos
+

@@ -8,11 +8,10 @@
 .c-tabs {
   --c-tab-link-padding-vertical: 0.5rem ;
   --c-tab-link-padding-horizontal: 1rem;
-  --c-tab-panel-padding: 2.5rem 2rem;
   --c-tab-link-color: #{$c-tab__color};
   --c-tab-item-bg: transparent;
   
-  background-color: $white;
+  background-color: $c-tab__bg;
 }
 
 .c-tabs__list,
@@ -28,7 +27,7 @@
   scroll-snap-type: x mandatory;
   text-align: center;
   
-  background: linear-gradient(180deg, $white calc(100% - .25rem), $timberwolf calc(100% - .25rem), $timberwolf 100%);
+  background: linear-gradient(180deg, $c-tab__bg calc(100% - .25rem), $c-tab__border calc(100% - .25rem), $c-tab__border 100%);
 }
 
 
@@ -40,8 +39,8 @@
   font-weight: $text--semibold; 
   text-decoration: none;
   display: block;
-  background-color: $white;
-  min-width: 10.5rem;
+  background-color: $c-tab__bg;
+  min-width: 11rem;
   box-sizing: border-box;
   
   &[aria-selected],
@@ -58,21 +57,28 @@
   position: relative;
   
   &.is-active {
-    --c-tab-item-bg: #{$gradient};
+    --c-tab-item-bg: #{$c-panel__active};
   }
 }
 
-.c-tabs__item + .c-tabs__item::after {
+// /* Alternative: .c-tabs__item:not(:first-child)::after */
+// .c-tabs__item + .c-tabs__item::after { 
+//   content: "";
+//   position: absolute;
+//   border: 1px solid  $timberwolf;
+//   left: 0;
+//   top: calc( var(--c-tab-link-padding-vertical) * 1.175); /* 1 */
+//   height: $text-size-l;
+// }
+//
+
+.c-tabs__item::after {
   content: "";
   position: absolute;
-  border: 1px solid  $timberwolf;
-  left: 0;
+  border: 1px solid  $c-tab__border;
+  right: 0;
   top: calc( var(--c-tab-link-padding-vertical) * 1.175); /* 1 */
   height: $text-size-l;
-}
-
-.c-tabs__panel {
-  padding: var(--c-tab-panel-padding);
 }
 
 //
@@ -81,7 +87,7 @@
 
 @media screen and (min-width: 37.5rem) { 
   .c-tabs {
-    --c-tab-link-padding-vertical: 1.5rem ;
+    --c-tab-link-padding-vertical: 1rem ;
     --c-tab-link-padding-horizontal: 2rem;
   }
 }
@@ -91,11 +97,4 @@
 // ==========================================================================
 
 @media screen and (min-width: 56rem) { 
-  .c-tabs {
-    --c-tab-panel-padding-vertical: 4rem 3.5rem;  
-  }
-  
-  .c-tabs__link {
-    font-size: $text-size-xl;
-  }
 }
