@@ -2,7 +2,50 @@
 // Component scaled-up
 // ==========================================================================
 
-.c-scaled-up {}
+.c-scaled-up {
+  --c-scaled-up-triangle__color: #{$heliotrope};
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: 
+    "triangle value"
+    "copy copy";
+}
+
+.c-scaled-up.c-scaled-up--down {
+  --c-scaled-up-triangle__color: #{$mesa-sunrise};
+}
+
+.c-scaled-up__triangle {
+  grid-area: triangle;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent var(--c-scaled-up-triangle__color);
+  border-width: 0 0.5rem 1rem;
+  border-style: solid;
+  margin-right: .5rem;
+}
+
+.c-scaled-up__value {
+  grid-area: value;
+  font-size: $text-size-xl;
+  font-weight: $text--bold;
+  color: $charcoal;
+  
+  &::after {
+    content: "%";
+  }
+}
+
+.c-scaled-up__copy {
+  grid-area: copy;
+  align-self: start;
+  color: $dark-gray;
+  font-size: $text-size-m;
+}
+
 
 
 //
@@ -10,21 +53,45 @@
 // ==========================================================================
 
 @media screen and (min-width: 37.5rem) {
-
+  .c-scaled-up__copy {
+    font-size: $text-size-s;
+  }
 } 
 
 //
 // Large Tablet
 // ==========================================================================
 @media screen and (min-width: 56rem) {
+  .c-scaled-up__triangle {
+    border-width: 0 0.75rem 1.5rem;
+  }
   
+  .c-scaled-up__value {
+    font-size: $text-size-xxl;
+  }
+  
+  .c-scaled-up__copy {
+    font-size: $text-size-m;
+  }
 }
 
 //
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
+  .c-scaled-up {
+    grid-template-areas: 
+      "triangle value"
+      ". copy";
+  }
   
+  .c-scaled-up__value {
+    font-size: $text-size-xxxl;
+    justify-self: start;
+  }
+  .c-scaled-up__copy {
+    justify-self: start;
+  }
 }
 
 

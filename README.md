@@ -16,7 +16,7 @@ $ npm run build                         > Create build [files for server - not o
 ```
 
 ## [TODO]
-* Unidad base es 8 ¿? elementos discrepantes (ancho tabs, espacios de elementos del grid de tabs, etc) 
+* Unidad base es 8 ¿? elementos discrepantes (ancho tabs, espacios de elementos del grid de tabs, indicador y porcentaje, etc) 
 * Border último elemento de las tabs 
 * Footer: revisar scroll 
 * Header: mostrar y ocultar junto con el scroll en resoluciones pequeñas

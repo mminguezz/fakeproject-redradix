@@ -1,27 +1,50 @@
 // ==========================================================================
 // Component Avatar
 // ==========================================================================
+// 1. magic number: 0.15 is an approximation to the calculation in percentage of the circumference of the image in polar coordinates 
+//    calc: ( width-image * percentage-polar-coordinates ) - status-item-half-width
+//
+
 
 .c-avatar {
+  --c-avatar-picture-size: 5rem;
+  --c-avatar-status--bg: #{$heliotrope};
+  color: $c-avatar__color;
+  line-height: 1.35;
 }
 
 .c-avatar__picture {
-  width: 5rem;
+  width: var(--c-avatar-picture-size);
+  aspect-ratio: 1 / 1; 
+  position: relative;
 }
 
 .c-avatar__image {
+  display: block;
   border-radius: 100%;
   width: 100%;
 }
 
 .c-avatar__status {
+  --c-avatar-status-width: 1rem;
+  background-color: var(--c-avatar-status--bg);
+  width: var(--c-avatar-status-width);
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  position: absolute;
+  top:   calc( (var(--c-avatar-picture-size) * 0.15 ) - ( var(--c-avatar-status-width) / 2 ) );  /* 1 */
+  right: calc( (var(--c-avatar-picture-size) * 0.15 ) - ( var(--c-avatar-status-width) / 2 ) );
 }
 
 .c-avatar__body {
+  align-self: center;
 }
 
 .c-avatar__title {
-  
+  color: $c-avatar-title__color;
+  font-size: $text-size-l;
+  font-weight: $text--semibold;
+  margin: 0 0 .25rem 0;
 }
 
 .c-avatar__description {
@@ -48,8 +71,16 @@
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
-  .c-avatar__picture {
-    width: 7.5rem;
+  .c-avatar {
+    --c-avatar-picture-size: 7.5rem;
+  }
+  .c-avatar__title {
+    font-size: $text-size-xl;
+  }
+  
+  
+  .c-avatar__description {
+    font-size: $text-size-l;
   }
 }
 

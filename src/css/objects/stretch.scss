@@ -4,22 +4,14 @@
 // ==========================================================================
 
 //
-// center contents
+// stretch all 
 // ==========================================================================
-.o-stack-center {
-  --content-width--max: 100vw;
-  
+.o-stretch {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
-
-.o-stack-center__item {
-  max-width: var(--content-width--max);
-  width: 100%;
-  box-sizing: border-box;
-}
-
 
 
 //
@@ -27,18 +19,13 @@
 // ==========================================================================
 
 @media screen and (min-width: 56rem) {
-  .o-stack-center {
-    --content-width--max: 55rem;
-  }
+
 }
 
 //
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
-  .o-stack-center {
-    --content-width--max: 74rem;
-  }
 
 }
 
@@ -47,7 +34,5 @@
 //  Large Desktop
 // ==========================================================================
 @media screen and (min-width: 112rem) { 
-  .o-stack-center {
-    --content-width--max: 80rem;
-  }
+
 }
