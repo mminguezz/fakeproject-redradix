@@ -615,13 +615,18 @@ html {
 }
 
 .o-media-figure {
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 
 .o-media-body {
   flex: 1;
 }
 
+@media screen and (min-width: 75rem) {
+  .o-media-figure {
+    margin-right: 2em;
+  }
+}
 .o-stack-center {
   --stack-center-padding: 1rem;
   --content-width--max: 100vw;
@@ -860,6 +865,20 @@ html {
   .c-tabs {
     --c-tab-link-padding-vertical: 1rem ;
     --c-tab-link-padding-horizontal: 2rem;
+  }
+}
+.c-avatar__picture {
+  width: 5rem;
+}
+
+.c-avatar__image {
+  border-radius: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 75rem) {
+  .c-avatar__picture {
+    width: 7.5rem;
   }
 }
 .c-panel__text {

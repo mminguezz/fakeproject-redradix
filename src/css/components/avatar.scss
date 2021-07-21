@@ -1,18 +1,32 @@
 // ==========================================================================
-// Panel
+// Component Avatar
 // ==========================================================================
 
-.c-panel {
+.c-avatar {
+}
+
+.c-avatar__picture {
+  width: 5rem;
+}
+
+.c-avatar__image {
+  border-radius: 100%;
+  width: 100%;
+}
+
+.c-avatar__status {
+}
+
+.c-avatar__body {
+}
+
+.c-avatar__title {
   
 }
 
-.c-panel__text {
-  color: $egyptian-blue;
-  font-size: $text-size-xl;
-  font-weight: $text--bold;
-  line-height: 1.35;
+.c-avatar__description {
+  
 }
-
 
 
 //
@@ -34,7 +48,9 @@
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
-  
+  .c-avatar__picture {
+    width: 7.5rem;
+  }
 }
 
 
@@ -42,5 +58,5 @@
 //  Large Desktop
 // ==========================================================================
 @media screen and (min-width: 112rem) {
-
+  
 }
