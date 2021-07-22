@@ -1,35 +1,61 @@
 // ==========================================================================
 // Panel
 // ==========================================================================
-// 1. (100-32*3)/2
-//
 .c-panel {
-  flex: 0 32%;
-  margin-bottom: 2%; /* 1 */
+  flex: 0 auto;
+  max-width: calc( (100% - 3rem) / 3 );
   aspect-ratio: 1 / 1;
-  
-  border: 1px solid olive;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: $egyptian-blue;
+  background-color: $lavender;
+  border-radius: $radius-box;
+  
+  transition-property: transform;
+  transition-duration: 320ms;
+  transition-timing-function: ease-out;
+  
+  &:hover {
+    background: $gradient;
+    color: $white;
+    box-shadow: 0 .25rem 1rem $shadow-box;
+    
+    transform: translate(0, -0.5rem);
+    
+    
+    & > .u-svg {
+      fill: $white;
+      filter: url(#shadow);
+    }
+  }
+  
+  
+}
+
+.u-svg {
+  fill: $egyptian-blue;
+  margin-bottom: .25rem;
 }
 
 .c-panel__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 1.5rem;
   
   align-items: center;
 }
 
 .c-panel__picture {
-
+  width: 30%;
+  aspect-ratio: 1 / 1;
 }
 
 .c-panel__text {
-  color: $egyptian-blue;
-  font-size: $text-size-xl;
+  color: inherit;
+  font-size: $text-size-m;
   font-weight: $text--bold;
   line-height: 1.35;
 }
@@ -41,21 +67,38 @@
 // ==========================================================================
 
 @media screen and (min-width: 37.5rem) {
-
+  .c-panel {
+    max-width: calc( (100% - 1.5rem) / 2 );
+  }
+  .c-panel__text {
+    font-size: $text-size-l ;
+  }
 } 
 
 //
 // Large Tablet
 // ==========================================================================
 @media screen and (min-width: 56rem) {
-  
+  .c-expandable {
+    max-height: 30.5rem;
+  }
 }
 
 //
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
+  .c-panel {
+    max-width: calc( (100% - 3rem) / 3 );
+  }
   
+  .c-expandable {
+    max-height: 17.5rem;
+  }
+  
+  .c-panel__text {
+    font-size: $text-size-xl;
+  }
 }
 
 
