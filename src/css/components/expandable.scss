@@ -2,7 +2,34 @@
 // Component expandable
 // ==========================================================================
 
-.c-expandable {}
+.c-expandable {
+  overflow: hidden;
+  max-height: 17.5rem;
+  position: relative;
+  
+  transition-property: max-height;
+  transition-duration: 680ms;
+  transition-timing-function: ease-out;
+  
+  &.is-open {
+    max-height: 5000px !important;
+    transition-timing-function: ease-in;
+  }
+}
+
+
+.c-expandable__action {
+  visibility: visible;
+  position: sticky;
+  
+  transition-property: visibility;
+  transition-duration: 680ms;
+  transition-timing-function: linear;
+}
+
+.is-open > .c-expandable__action {
+  visibility: hidden;
+}
 
 
 //

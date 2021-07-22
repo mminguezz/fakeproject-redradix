@@ -1026,4 +1026,54 @@ html {
   line-height: 1.35;
 }
 
+.c-scoring {
+  --c-scoring-bar--color: #60f560;
+  --c-scoring-bar--percent: 0%;
+  margin-bottom: 2rem;
+}
+
+.c-scoring__value {
+  grid-area: value;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #484848;
+}
+
+.c-scoring__copy {
+  grid-area: copy;
+  align-self: start;
+  color: #afafaf;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.c-scoring__progress-bar {
+  position: relative;
+  width: 100%;
+  background-color: #afafaf;
+  border-radius: 0.25rem;
+  height: 0.5rem;
+  opacity: 0.8;
+}
+.c-scoring__progress-bar::after {
+  content: "";
+  opacity: 1;
+  background-color: var(--c-scoring-bar--color);
+  width: var(--c-scoring-bar--percent);
+  height: inherit;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition-property: width;
+  transition-duration: 680ms;
+  transition-timing-function: ease-in;
+}
+
+@media screen and (min-width: 75rem) {
+  .c-scoring__value {
+    font-size: 3.5rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

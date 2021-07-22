@@ -2,7 +2,52 @@
 // Component scoring
 // ==========================================================================
 
-.c-scoring {}
+.c-scoring {
+  --c-scoring-bar--color : #{$heliotrope};
+  --c-scoring-bar--percent: 0%;
+  margin-bottom: 2rem;
+}
+
+
+.c-scoring__value {
+  grid-area: value;
+  font-size: $text-size-xxl;
+  font-weight: $text--bold;
+  color: $charcoal;
+}
+
+.c-scoring__copy {
+  grid-area: copy;
+  align-self: start;
+  color: $dark-gray;
+  font-size: $text-size-m;
+  margin-bottom: .5rem;
+}
+
+.c-scoring__progress-bar {
+  position: relative;
+  width: 100%;
+  background-color: $dark-gray;
+  border-radius: .25rem;
+  height: .5rem;
+  opacity: .8;
+  
+  &::after {
+    content: '';
+    opacity: 1;
+    background-color: var(--c-scoring-bar--color);
+    width:  var(--c-scoring-bar--percent);
+    height: inherit;
+    border-radius: inherit;
+    top: 0;
+    left: 0;
+    position: absolute;
+    
+    transition-property: width;
+    transition-duration: 680ms;
+    transition-timing-function: ease-in;
+  }
+}
 
 
 //
@@ -24,9 +69,10 @@
 //  Small Desktop
 // ==========================================================================
 @media screen and (min-width: 75rem) { 
-  
+  .c-scoring__value {
+    font-size: $text-size-xxxl;
+  }
 }
-
 
 //
 //  Large Desktop

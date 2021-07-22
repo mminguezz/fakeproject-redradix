@@ -61,6 +61,20 @@
     });
   });
   
+  // Scoring Progress Bar
+  setTimeout(function(){ 
+    document.querySelector('.c-scoring').style.setProperty('--c-scoring-bar--percent', '87%');
+  }, 1200);
   
+  // expandable Read more
+  var expandable = document.querySelector(".js-expandable");
+  $(".js-expandable-action").addEventListener('click', function(event) {
+    var isOpen = expandable.classList.contains("is-open");
+    var expandableStatus = !isOpen;
+    
+    expandable.setAttribute("aria-expanded", expandableStatus);
+    expandable.classList.toggle("is-open");
+  });
+
   
 })();
