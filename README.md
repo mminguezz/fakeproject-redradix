@@ -22,4 +22,5 @@ $ npm run build                         > Create build [files for server - not o
 * Header: mostrar y ocultar junto con el scroll en resoluciones pequeñas
 * CrossBrowser: scroll de las tabs - scroll-snap-type
 * Definir el foco de los elementos
+* El filtro de la sombra en los SVG del bloque de 6 cajas (c-panel) en firefox no funciona
 

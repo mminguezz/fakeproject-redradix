@@ -948,7 +948,7 @@ html {
 }
 .c-panel:hover > .u-svg {
   fill: white;
-  filter: url(#shadow);
+  /* filter: url(#shadow); */
 }
 
 .u-svg {
