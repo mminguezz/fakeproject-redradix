@@ -1,9 +1,30 @@
 // ==========================================================================
 // Panel
 // ==========================================================================
-
+// 1. (100-32*3)/2
+//
 .c-panel {
+  flex: 0 32%;
+  margin-bottom: 2%; /* 1 */
+  aspect-ratio: 1 / 1;
   
+  border: 1px solid olive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.c-panel__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  align-items: center;
+}
+
+.c-panel__picture {
+
 }
 
 .c-panel__text {

@@ -68,9 +68,17 @@
   
   // expandable Read more
   var expandable = document.querySelector(".js-expandable");
-  $(".js-expandable-action").addEventListener('click', function(event) {
+  var expandableAction = document.querySelector(".js-expandable-action");
+  
+  expandableAction.addEventListener('click', function(event) {
     var isOpen = expandable.classList.contains("is-open");
     var expandableStatus = !isOpen;
+    
+    if (!isOpen) {
+      expandableAction.innerHTML= 'View less' 
+    } else {
+      expandableAction.innerHTML= 'View more'
+    };
     
     expandable.setAttribute("aria-expanded", expandableStatus);
     expandable.classList.toggle("is-open");

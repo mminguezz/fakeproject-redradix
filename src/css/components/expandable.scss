@@ -6,29 +6,56 @@
   overflow: hidden;
   max-height: 17.5rem;
   position: relative;
+  padding-bottom: 2rem;
   
   transition-property: max-height;
   transition-duration: 680ms;
   transition-timing-function: ease-out;
   
   &.is-open {
-    max-height: 5000px !important;
+    max-height: 1200px !important;
     transition-timing-function: ease-in;
+    
+    .c-expandable__container {
+      height: 5rem;
+    }
+  }
+}
+
+.c-expandable__container {
+  height: 5rem;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, .95) 10%, rgba(255, 255, 255, 0) 90%);
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-expandable__action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  background-color: transparent;
+  border: none;
+  display: block;
+  padding: 0;  
+  margin: 0 auto;
+  
+  &:hover {
+    color: $dark-gray;
   }
 }
 
 
-.c-expandable__action {
-  visibility: visible;
-  position: sticky;
-  
-  transition-property: visibility;
-  transition-duration: 680ms;
-  transition-timing-function: linear;
-}
+
+
 
 .is-open > .c-expandable__action {
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 
