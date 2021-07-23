@@ -936,6 +936,7 @@ html {
   color: #c4cce8;
   background-color: #f0f2f9;
   border-radius: 0.5rem;
+  width: 100%;
   transition-property: transform;
   transition-duration: 320ms;
   transition-timing-function: ease-out;
